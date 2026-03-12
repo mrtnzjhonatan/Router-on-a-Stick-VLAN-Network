@@ -61,7 +61,6 @@ show vlan brief
 
 Host devices are simulated using **VPCS**.
 
-![Virtual PC Simulator](Virt_PC.png)
 
 ---
 
@@ -71,16 +70,18 @@ Testing connectivity shows that devices in different VLANs cannot communicate.
 
 Example:
 
-• PC1 → PC4  
-• PC1 → PC2  
+• PC1 → PC4: Success, they are on same VLAN
 
-![Ping Results](PC_Pings.png)
+• PC1 → PC2: Fail, they are on different VLANs  
+
+![Virtual PC Simulator](Virt_PC.png)
+
 
 ---
 
-## Step 5 – Configure Access Ports
+## Step 5 – Check Switch Interface Connnected to Router
 
-Switch ports connected to hosts are configured as access ports assigned to their respective VLANs.
+The link between switch and router is currently in Access Mode (VLAN 1)
 
 ![Access Mode Configuration](inter-access-mode.png)
 
@@ -88,7 +89,7 @@ Switch ports connected to hosts are configured as access ports assigned to their
 
 ## Step 6 – Configure Trunk Link
 
-The link between switches must allow multiple VLANs using trunking.
+Change the interface to a trunk link.
 
 ![Trunk Configuration](inter-trunk.png)
 
@@ -107,6 +108,8 @@ ip address 192.168.5.1 255.255.255.0
 ```
 
 ![Router Subinterface](sun-int.png)
+
+Repeat step for VLAN 10 in fa0/0.10
 
 ---
 
