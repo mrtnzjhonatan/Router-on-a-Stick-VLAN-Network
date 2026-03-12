@@ -1,7 +1,7 @@
 # Router-on-a-Stick VLAN Network Lab
 
 ## Practicing Cisco Networking with Linux
-
+![Linux and Cisco Networking Lab](linux-cisco.png)
 Many people assume that practicing Cisco networking requires expensive hardware or commercial simulation tools. However, it is possible to build a fully functional Cisco networking lab using **Linux-based tools**.
 
 This project demonstrates how Cisco router and switch configurations can be practiced using the following open-source tools:
